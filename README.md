@@ -1,57 +1,34 @@
 # FLAMES
 Project Name: Flames (C++ implementation)  Purpose: To predict the relationship between two people based on the letters in their names.
-#include <bits/stdc++.h>
-using namespace std;
-int main()
-{
-  int g,j,k=0;
-  char s[20],u[20];
-  string v,b;
-  cout<<"Enter the name first";
-  getline(cin, v);
-  cout<<"Enter the name second";
-  cin>>b;
-  for(int i=0;i<v.length();++i)
-  {
-      
-      
-      for(j=0;j<b.length();++j)
-      {
-         if (v[i]==b[j]) 
-         
-         {  k++;
-             v.erase(i,1);
-             b.erase(j,1);
-             i--;
-             j--;
-             break;
-         }
-         
-         
-      }
-  }
-  g=v.length()+b.length();
-  if(g>5)
-  {
-      g=g%6;
-  }
-   cout<<k;
- 
- switch(g)
- {
-     case 1: cout<<" this is friend";
-      break;
-     case 2: cout<<"this is love";
-     break;
-     case 3: cout<<"this is affection";
-     break;
-     case 4: cout<<" this is marrage";
-     break;
-     case 5: cout<<"this is sibilings";
-     break;
-     default:cout<<"Enter the a character" ;
-     
- }
-  
-}
 
+    
+Here's a description of the Flames project based on the code you provided:
+
+Project Name: Flames (C++ implementation)
+
+Purpose: To predict the relationship between two people based on the letters in their names.
+
+Key Features:
+
+User Input: Prompts the user to enter two names.
+Name Comparison: Compares the letters in the names, identifying and removing matches.
+Outcome Calculation: Determines the residual number of letters and uses a modulo operation to assign a value between 1 and 5.
+Relationship Prediction: Maps the calculated value to one of six possible relationship outcomes:
+1: Friends
+2: Lovers
+3: Affection
+4: Marriage
+5: Siblings
+Default: Error handling (should not occur in normal execution)
+Output: Displays the predicted relationship.
+Technical Details:
+
+Programming Language: C++
+Standard Library: Utilizes iostream, string, and std namespace.
+Control Flow: Employs for loops, if statements, and a switch statement.
+String Manipulation: Uses getline(), cin, erase(), and string comparison.
+Modulo Operation: Calculates the final relationship value using the modulo operator (%).
+Target Audience:
+
+Individuals interested in lighthearted relationship predictions.
+Students learning C++ programming concepts.
